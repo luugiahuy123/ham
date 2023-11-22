@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Find stars</h1>-->
+<!--<input id="key" type="text">-->
+<!--<button onclick="translate1">Find stars</button>-->
+<!--<p id="result">kết quả</p>-->
+<h1>Translate</h1>
+<input id="key" type=text>
+<button onclick="translate1()">Translate</button>
+<p id="result">kết Quả</p>
+<script>
+    // function indexOf(star, key) {
+    //     for (let i = 0; i < star.length; i++) {
+    //         if (key == star[i]) {
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
+    //
+    // function findStars() {
+    //     let key = document.getElementById("key").value;
+    //     let index = indexOf(star2, key);
+    //     let result;
+    //     if (index != -1) {
+    //         result = `${key} nghia la ${star1[index]} `
+    //     } else {
+    //         let index2 = indexOf(star1, key);
+    //         if (index2 != -1) {
+    //             result = `${key} nghia la ${star2[index]}`
+    //         } else {
+    //             result = `khong tim thay ${key}`
+    //         }
+    //     }
+    //     document.getElementById("result").innerText = result;
+    // }
+    function indexOf1(arr, key) {
+        for (let i = 0; i < arr.length; i++) {
+            if (key == arr[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function translate1() {
+        let key = document.getElementById("key").value;
+        let index = indexOf1(star2, key)
+        let result;
+        if (index != -1) {
+            result = `${key} nghia la ${star1[index]}`
+        } else {
+            let index2 = indexOf1(star1, key);
+            if (index2 != -1) {
+                result = `${key} co nghia la ${star2[index2]}`
+            } else
+                result = `khong tim thay tu ${key}`;
+        }
+        document.getElementById("result").innerText = result;
+    }
+
+
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+</script>
+</body>
+</html>
